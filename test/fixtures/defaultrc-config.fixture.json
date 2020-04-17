@@ -1,0 +1,12 @@
+{
+  "logo": false,
+  "logColor": "magenta",
+  "images": ["first-image", "second-image"],
+  "commands": {
+    "clean": ["echo this is the clean test command from default"],
+    "unit": [
+      "unit -f -env this is the first unit test command from default",
+      "unit -ls this is the second unit test command from default"
+    ]
+  }
+}

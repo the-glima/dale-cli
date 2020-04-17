@@ -1,0 +1,23 @@
+{
+  "logo": true,
+  "logColor": "cyan",
+  "images": ["foo", "bar"],
+  "commands": {
+    "build": ["npx tsc -p tsconfig.build.json"],
+    "clean": [
+      "docker ps -aqf name=<%= IMAGE =%> | xargs -n 1 docker rm",
+      "docker images <%= IMAGE =%> -q | xargs -n 1 docker rmi",
+      "docker image prune -af"
+    ],
+    "format": ["npx prettier --write \"{src,test}/**/*.ts\""],
+    "integration": ["node newman.js"],
+    "lint": ["npx tslint -p tsconfig.json -c tslint.json"],
+    "start": [
+      "docker network ls | grep payvision || docker network create -d bridge payvision",
+      "docker-compose -f docker-compose<%= ENV =%>.yaml up"
+    ],
+    "stop": ["docker-compose -f docker-compose<%= ENV =%>.yaml down -v --rmi=local"],
+    "testcafe": ["set FRONTEND_URL=<%= URL =%> && npx testcafe --speed 1 chrome ./main.js"],
+    "unit": ["npx jest --runInBand --testPathIgnorePatterns=submodules"]
+  }
+}

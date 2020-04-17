@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Config: Get Config File should get default config when can't find the root one 1`] = `
+Object {
+  "commands": Object {
+    "build": Array [
+      "npx tsc -p tsconfig.build.json",
+    ],
+    "clean": Array [
+      "docker ps -aqf name=<%= IMAGE =%> | xargs -n 1 docker rm",
+      "docker images <%= IMAGE =%> -q | xargs -n 1 docker rmi",
+      "docker image prune -af",
+    ],
+    "format": Array [
+      "npx prettier --write \\"{src,test}/**/*.ts\\"",
+    ],
+    "integration": Array [
+      "node newman.js",
+    ],
+    "lint": Array [
+      "npx tslint -p tsconfig.json -c tslint.json",
+    ],
+    "start": Array [
+      "docker network ls | grep payvision || docker network create -d bridge payvision",
+      "docker-compose -f docker-compose<%= ENV =%>.yaml up",
+    ],
+    "stop": Array [
+      "docker-compose -f docker-compose<%= ENV =%>.yaml down -v --rmi=local",
+    ],
+    "testcafe": Array [
+      "set FRONTEND_URL=<%= URL =%> && npx testcafe --speed 1 chrome ./main.js",
+    ],
+    "unit": Array [
+      "npx jest --runInBand --testPathIgnorePatterns=submodules",
+    ],
+  },
+  "images": Array [
+    "foo",
+    "bar",
+  ],
+  "logColor": "cyan",
+  "logo": true,
+}
+`;
+
+exports[`Config: Get Config File should read and return default parsed configuration 1`] = `
+Object {
+  "commands": Object {
+    "clean": Array [
+      "echo this is the clean test command from default",
+    ],
+    "unit": Array [
+      "unit -f -env this is the first unit test command from default",
+      "unit -ls this is the second unit test command from default",
+    ],
+  },
+  "images": Array [
+    "first-image",
+    "second-image",
+  ],
+  "logColor": "magenta",
+  "logo": false,
+}
+`;
+
+exports[`Config: Get Config File should read and return root parsed configuration 1`] = `
+Object {
+  "commands": Object {
+    "reset": Array [
+      "echo this is the reset test command from root",
+    ],
+  },
+  "logColor": "red",
+  "logo": true,
+}
+`;

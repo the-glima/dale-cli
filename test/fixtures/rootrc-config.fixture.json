@@ -1,0 +1,7 @@
+{
+  "logo": true,
+  "logColor": "red",
+  "commands": {
+    "reset": ["echo this is the reset test command from root"]
+  }
+}
