@@ -22,7 +22,7 @@ describe('Run Start Command', () => {
 
       const expected = [
         'DALE-CLI: STARTING CONTAINERS',
-        'docker network ls | grep payvision || docker network create -d bridge payvision',
+        'docker network ls | grep network || docker network create -d bridge network',
         'docker-compose -f docker-compose.yaml up'
       ]
 
@@ -36,7 +36,7 @@ describe('Run Start Command', () => {
 
       const expected = [
         'DALE-CLI: STARTING CONTAINERS',
-        'docker network ls | grep payvision || docker network create -d bridge payvision',
+        'docker network ls | grep network || docker network create -d bridge network',
         'docker-compose -f docker-compose-env.yaml up'
       ]
 

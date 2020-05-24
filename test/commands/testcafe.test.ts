@@ -32,7 +32,7 @@ describe('Run TestCafe Command', () => {
 
       const expected = [
         'DALE-CLI: RUNNING TESTCAFE TESTS DEV',
-        'set FRONTEND_URL=https://opsflow.dev.k8s.payvision.com/ && npx testcafe --speed 1 chrome ./main.js'
+        'set FRONTEND_URL=https://opsflow.dev.k8s.network.com/ && npx testcafe --speed 1 chrome ./main.js'
       ]
 
       const outputTrimmed = helpers.outputTrim(output)
@@ -45,7 +45,7 @@ describe('Run TestCafe Command', () => {
 
       const expected = [
         'DALE-CLI: RUNNING TESTCAFE TESTS ACC',
-        'set FRONTEND_URL=https://opsflow.acc.k8s.payvision.com/ && npx testcafe --speed 1 chrome ./main.js'
+        'set FRONTEND_URL=https://opsflow.acc.k8s.network.com/ && npx testcafe --speed 1 chrome ./main.js'
       ]
 
       const outputTrimmed = helpers.outputTrim(output)
@@ -58,7 +58,7 @@ describe('Run TestCafe Command', () => {
 
       const expected = [
         'DALE-CLI: RUNNING TESTCAFE TESTS PROD',
-        'set FRONTEND_URL=https://opsflow.prod.k8s.payvision.com/ && npx testcafe --speed 1 chrome ./main.js'
+        'set FRONTEND_URL=https://opsflow.prod.k8s.network.com/ && npx testcafe --speed 1 chrome ./main.js'
       ]
 
       const outputTrimmed = helpers.outputTrim(output)

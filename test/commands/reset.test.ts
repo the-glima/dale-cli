@@ -31,7 +31,7 @@ describe('Run Reset Command', () => {
         'docker ps -aqf name=bar | xargs -n 1 docker rm',
         'docker images bar -q | xargs -n 1 docker rmi',
         'docker image prune -af',
-        'docker network ls | grep payvision || docker network create -d bridge payvision',
+        'docker network ls | grep network || docker network create -d bridge network',
         'docker-compose -f docker-compose.yaml up'
       ]
 
@@ -54,7 +54,7 @@ describe('Run Reset Command', () => {
         'docker ps -aqf name=bar | xargs -n 1 docker rm',
         'docker images bar -q | xargs -n 1 docker rmi',
         'docker image prune -af',
-        'docker network ls | grep payvision || docker network create -d bridge payvision',
+        'docker network ls | grep network || docker network create -d bridge network',
         'docker-compose -f docker-compose-env.yaml up'
       ]
 

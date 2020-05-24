@@ -1,6 +1,4 @@
 # Dale CLI
-[![Build status](https://dev.azure.com/payvision/B-Ops/_apis/build/status/NPM-Packages/dale-cli)](https://dev.azure.com/payvision/B-Ops/_build/latest?definitionId=0)
-
 > It's pronounced /dah-Leh/ (the Spanish way of saying it)
 
 One CLI to rule them all! 
@@ -13,12 +11,7 @@ A bunch of daily commands to help the development of our projects.
 * [Development](#development)
 
 ## Installation
-You need to specify a version to install.
-
-### Global Installation 
-```sh-session
-$ npm install -g @payvision/dale-cli
-```
+Soon...
 
 #### Usage 
 ```sh-session
@@ -316,7 +309,7 @@ We are using [Husky](https://github.com/typicode/husky) to run some commands bef
 Check `husky` options in `package.json`.
 
 #### Pre Commit
-Please read our documentation about Git Commit: [Writing a Commit Message](https://dev.azure.com/payvision/B-Ops/_wiki/wikis/B-Ops.wiki?pagePath=%2FBest%20Practices%2FGit%2FWriting%20a%20Commit%20Message&pageId=215&wikiVersion=GBwikiMaster) and [Applying Conventional Commits](https://dev.azure.com/payvision/B-Ops/_wiki/wikis/B-Ops.wiki?pagePath=%2FBest%20Practices%2FGit%2FApplying%20Conventional%20Commits&pageId=305&wikiVersion=GBwikiMaster).
+Please read our documentation about Git Commit: [Writing a Commit Message](https://dev.azure.com/network/B-Ops/_wiki/wikis/B-Ops.wiki?pagePath=%2FBest%20Practices%2FGit%2FWriting%20a%20Commit%20Message&pageId=215&wikiVersion=GBwikiMaster) and [Applying Conventional Commits](https://dev.azure.com/network/B-Ops/_wiki/wikis/B-Ops.wiki?pagePath=%2FBest%20Practices%2FGit%2FApplying%20Conventional%20Commits&pageId=305&wikiVersion=GBwikiMaster).
 
 We use **[Commitlinnt](https://github.com/conventional-changelog/commitlint)** (a tool to check if your commit messages meet the conventional commit format) integrated with [Husky](https://github.com/typicode/husky), so before committing the message will be linted. If it doesn't follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/) the commit it will be prevented. 
 

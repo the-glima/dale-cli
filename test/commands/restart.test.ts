@@ -23,7 +23,7 @@ describe('Run Restart Command', () => {
       const expected = [
         'DALE-CLI: RESTARTING CONTAINERS',
         'docker-compose -f docker-compose.yaml down -v --rmi=local',
-        'docker network ls | grep payvision || docker network create -d bridge payvision',
+        'docker network ls | grep network || docker network create -d bridge network',
         'docker-compose -f docker-compose.yaml up'
       ]
 
@@ -38,7 +38,7 @@ describe('Run Restart Command', () => {
       const expected = [
         'DALE-CLI: RESTARTING CONTAINERS',
         'docker-compose -f docker-compose-env.yaml down -v --rmi=local',
-        'docker network ls | grep payvision || docker network create -d bridge payvision',
+        'docker network ls | grep network || docker network create -d bridge network',
         'docker-compose -f docker-compose-env.yaml up'
       ]
 

@@ -25,10 +25,8 @@ const settings = {
   commands: {
     testcafe: {
       url: {
-        local: 'http://localhost:4200/',
-        dev: {name: 'dev', value: 'https://opsflow.dev.k8s.payvision.com/'},
-        acc: {name: 'acc', value: 'https://opsflow.acc.k8s.payvision.com/'},
-        prod: {name: 'prod', value: 'https://opsflow.prod.k8s.payvision.com/'}
+        local: 'http://localhost:3000/',
+        dev: {name: 'dev', value: 'https://ur/'}
       }
     }
   }
